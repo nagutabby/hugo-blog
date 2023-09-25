@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>{{ block "title" . }}{{ end }}</title>
+    {{ with resources.Get "js/index.ts" }}
+    {{ $js := resources.Get . | js.Build }}
+      <script src="{{ $js.Permalink }}"></script>
+    {{ end }}
+  </head>
+  <body>
+    {{ block "main" . }}{{ end }}
+  </body>
+</html>
