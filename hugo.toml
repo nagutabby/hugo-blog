@@ -1,4 +1,5 @@
 baseURL = 'https://blog.nagutabby.uk/'
+defaultContentLanguage = 'ja'
+disableKinds = ["RSS"]
 languageCode = 'ja'
 title = 'nagutabbyの考え事'
-disableKinds = ["RSS"]
