@@ -2,7 +2,7 @@
   <meta name="description" content="{{ .Summary }}">
 {{ end }}
 {{ define "title" }}
-{{- .Title -}}
+{{- .Title }} - {{ .Site.Title }}
 {{ end }}
 {{ define "main" }}
 {{ .Content }}
