@@ -10,7 +10,7 @@
     {{ end }}
     {{ $style := resources.Get "css/style.scss" | toCSS | resources.PostCSS }}
     {{ if  hugo.IsProduction  }}
-      {{ $styles = $styles | minify | fingerprint | resources.PostProcess }}
+      {{ $style = $style | minify | fingerprint | resources.PostProcess }}
     {{ end }}
     <link href="{{ $style.RelPermalink }}" rel="stylesheet" />
   </head>
