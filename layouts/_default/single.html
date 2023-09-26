@@ -5,5 +5,7 @@
 {{- .Title }} - {{ .Site.Title }}
 {{ end }}
 {{ define "main" }}
+{{ $image := resources.Get .Params.image }}
+<img src="{{ $image.RelPermalink }}">
 {{ .Content }}
 {{ end }}
