@@ -15,6 +15,9 @@
     <link href="{{ $style.RelPermalink }}" rel="stylesheet" />
   </head>
   <body>
+    <ul>
+      <li><a href='{{ relURL "/" }}'>Home</a></li>
+    </ul>
     {{ block "main" . }}{{ end }}
   </body>
 </html>
