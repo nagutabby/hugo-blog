@@ -6,7 +6,7 @@
     <title>{{ block "title" . }}{{ end }}</title>
     {{ with resources.Get "js/index.ts" }}
       {{ $js := resources.Get . | js.Build }}
-      <script src="{{ $js.Permalink }}"></script>
+      <script src="{{ $js.RelPermalink }}"></script>
     {{ end }}
     {{ $style := resources.Get "css/style.scss" | toCSS | resources.PostCSS }}
     {{ if  hugo.IsProduction  }}
