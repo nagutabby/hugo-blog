@@ -20,9 +20,6 @@
   <body class="flex flex-col min-h-screen">
     {{ partial "header.html" . }}
     <main class="flex-grow bg-gray-800">
-      <ul>
-        <li><a href='{{ relURL "/" }}'>Home</a></li>
-      </ul>
       {{ block "main" . }}{{ end }}
     </main>
     {{ partial "footer.html" . }}
