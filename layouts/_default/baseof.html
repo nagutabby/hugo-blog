@@ -3,6 +3,9 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    {{ block "description" . }}
+      <meta name="description" content="{{ .Description }}">
+    {{ end }}
     <title>{{ block "title" . }}{{ end }}</title>
     {{ with resources.Get "js/index.ts" }}
       {{ $js := resources.Get . | js.Build }}
