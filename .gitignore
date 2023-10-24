@@ -2,3 +2,5 @@
 /.hugo_build.lock
 /resources
 /hugo_stats.json
+
+.DS_Store
